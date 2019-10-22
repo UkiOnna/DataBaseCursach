@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\AuctionInterface",
+    "\\AuctionInterface\\DataPages",
+    "\\AuctionInterface\\DataPages\\AuctionPages",
+    "\\AuctionInterface\\DataPages\\Client"
+  ],
+  "SelectedNode": "\\AuctionInterface\\DataPages\\AuctionPages\\AuctionEditAdd.xaml",
+  "PreviewInSolutionExplorer": false
+}
