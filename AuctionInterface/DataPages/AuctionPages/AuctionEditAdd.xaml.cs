@@ -47,7 +47,7 @@ namespace AuctionInterface.DataPages.AuctionPages
         private void Create(object sender, RoutedEventArgs e)
         {
             
-            if (!IsDataNull())
+            if (IsDataFill())
             {
                 using (var context = new AuctionContext())
                 {
@@ -60,10 +60,11 @@ namespace AuctionInterface.DataPages.AuctionPages
             else
             {
                 MessageBox.Show("Заполните все поля");
+                data.Clear();
             }
         }
 
-        private bool IsDataNull()
+        private bool IsDataFill()
         {
             data.AddRange(new List<string> { name.Text, adress.Text,date.Text,specify.Text });
             foreach(var str in data)
