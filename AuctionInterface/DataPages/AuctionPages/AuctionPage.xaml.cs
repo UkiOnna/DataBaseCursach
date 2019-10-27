@@ -22,7 +22,6 @@ namespace AuctionInterface.DataPages.AuctionPages
     public partial class AuctionPage : Page
     {
         Window _window;
-        int _id;
         public AuctionPage(Window window)
         {
             InitializeComponent();

@@ -1,5 +1,6 @@
 ﻿using AuctionInterface.DataPages.AuctionPages;
 using AuctionInterface.DataPages.Client;
+using AuctionInterface.DataPages.ItemPages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +38,11 @@ namespace AuctionInterface
         private void ShowAuctionPage(object sender, RoutedEventArgs e)
         {
             _window.Content = new AuctionPage(_window);
+        }
+
+        private void ShowItemPage(object sender, RoutedEventArgs e)
+        {
+            _window.Content = new ItemPage(_window);
         }
     }
 }

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\User\Desktop\Темир\Уник\БД\DataBaseCursach\AuctionInterface\App.xaml
-6119763314
+81569753404
 
-17737985103
+20-1781967269
 18827804396
-DataPages\AuctionPages\AuctionEditAdd.xaml;DataPages\AuctionPages\AuctionPage.xaml;DataPages\Client\AddClientPage.xaml;DataPages\Client\ClientPage.xaml;MainMenu.xaml;MainWindow.xaml;
+DataPages\AuctionPages\AuctionEditAdd.xaml;DataPages\AuctionPages\AuctionPage.xaml;DataPages\Client\AddClientPage.xaml;DataPages\Client\ClientPage.xaml;DataPages\ItemPages\ItemEditAddPage.xaml;DataPages\ItemPages\ItemPage.xaml;MainMenu.xaml;MainWindow.xaml;
 
 False
 

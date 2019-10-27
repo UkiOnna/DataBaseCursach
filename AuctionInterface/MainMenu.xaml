@@ -11,7 +11,7 @@
     <Grid>
         <Button Content="Clients" HorizontalAlignment="Left" Margin="353,131,0,0" VerticalAlignment="Top" Width="75" Click="ShowClientPage"/>
         <Button Content="Auctions" HorizontalAlignment="Left" Margin="353,171,0,0" VerticalAlignment="Top" Width="75" Click="ShowAuctionPage"/>
-        <Button Content="Items" HorizontalAlignment="Left" Margin="353,211,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Items" HorizontalAlignment="Left" Margin="353,211,0,0" VerticalAlignment="Top" Width="75" Click="ShowItemPage"/>
         <Button Content="Lots" HorizontalAlignment="Left" Margin="353,251,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="FirmBooks" HorizontalAlignment="Left" Margin="353,291,0,0" VerticalAlignment="Top" Width="75"/>
 

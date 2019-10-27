@@ -89,3 +89,7 @@ C:\Users\User\Desktop\Темир\Уник\БД\DataBaseCursach\AuctionInterface\
 C:\Users\User\Desktop\Темир\Уник\БД\DataBaseCursach\AuctionInterface\obj\Debug\AuctionInterface.csproj.CopyComplete
 C:\Users\User\Desktop\Темир\Уник\БД\DataBaseCursach\AuctionInterface\obj\Debug\AuctionInterface.exe
 C:\Users\User\Desktop\Темир\Уник\БД\DataBaseCursach\AuctionInterface\obj\Debug\AuctionInterface.pdb
+C:\Users\User\Desktop\Темир\Уник\БД\DataBaseCursach\AuctionInterface\obj\Debug\DataPages\ItemPages\ItemEditAddPage.g.cs
+C:\Users\User\Desktop\Темир\Уник\БД\DataBaseCursach\AuctionInterface\obj\Debug\DataPages\ItemPages\ItemPage.g.cs
+C:\Users\User\Desktop\Темир\Уник\БД\DataBaseCursach\AuctionInterface\obj\Debug\DataPages\ItemPages\ItemEditAddPage.baml
+C:\Users\User\Desktop\Темир\Уник\БД\DataBaseCursach\AuctionInterface\obj\Debug\DataPages\ItemPages\ItemPage.baml

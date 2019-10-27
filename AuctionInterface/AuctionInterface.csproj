@@ -80,6 +80,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="DataPages\ItemPages\ItemEditAddPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataPages\ItemPages\ItemPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -93,6 +101,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="AuctionContext.cs" />
+    <Compile Include="CustomModels\CustomItem.cs" />
     <Compile Include="DataPages\AuctionPages\AuctionEditAdd.xaml.cs">
       <DependentUpon>AuctionEditAdd.xaml</DependentUpon>
     </Compile>
@@ -104,6 +113,12 @@
     </Compile>
     <Compile Include="DataPages\Client\ClientPage.xaml.cs">
       <DependentUpon>ClientPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataPages\ItemPages\ItemEditAddPage.xaml.cs">
+      <DependentUpon>ItemEditAddPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataPages\ItemPages\ItemPage.xaml.cs">
+      <DependentUpon>ItemPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>

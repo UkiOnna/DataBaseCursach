@@ -64,6 +64,28 @@ namespace AuctionInterface.DataPages.AuctionPages
             }
         }
 
+        private void Edit(object sender, RoutedEventArgs e)
+        {
+            if (IsDataFill())
+            {
+                using (var context = new AuctionContext())
+                {
+                    Auction person = context.Auctions.SingleOrDefault(p => p.Id == _id);
+                    person.Adress = adress.Text;
+                    person.Name = name.Text;
+                    person.Specify = specify.Text;
+                    person.AuctionDate = DateTimeOffset.Parse(date.Text);
+                    context.SaveChanges();
+                }
+                MessageBox.Show("Edited");
+                _window.Content = new AuctionPage(_window);
+            }
+            else
+            {
+                MessageBox.Show("Заполните все поля");
+            }
+        }
+
         private bool IsDataFill()
         {
             data.AddRange(new List<string> { name.Text, adress.Text,date.Text,specify.Text });
@@ -75,6 +97,10 @@ namespace AuctionInterface.DataPages.AuctionPages
                 }
             }
             return true;
+        }
+        private void Back(object sender, RoutedEventArgs e)
+        {
+            _window.Content = new AuctionPage(_window);
         }
     }
 }
