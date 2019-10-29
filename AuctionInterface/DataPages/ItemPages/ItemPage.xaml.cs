@@ -65,7 +65,7 @@ namespace AuctionInterface.DataPages.ItemPages
         {
             if (table.SelectedItem != null)
             {
-                Item item = (Item)table.SelectedItem;
+                CustomItem item = (CustomItem)table.SelectedItem;
                 _window.Content = new ItemEditAddPage(item.Name, item.StartPrice, item.EndPrice, item.Description, item.SellerId, item.BuyerId, item.Id, _window);
             }
             else
@@ -78,7 +78,7 @@ namespace AuctionInterface.DataPages.ItemPages
         {
             if (table.SelectedItem != null)
             {
-                Item item = (Item)table.SelectedItem;
+                CustomItem item = (CustomItem)table.SelectedItem;
                 using (var context = new AuctionContext())
                 {
                     context.Items.Remove(context.Items.SingleOrDefault(p => p.Id == item.Id));

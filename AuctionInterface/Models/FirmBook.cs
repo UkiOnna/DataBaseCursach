@@ -10,7 +10,7 @@ namespace AuctionInterface.Models
     {
         public int AuctionId { get; set; }
         public Auction Auction { get; set; }
-        public int ItemId { get; set; }
-        public Item Item { get; set; }
+        public int LotId { get; set; }
+        public Lot Lot { get; set; }
     }
 }

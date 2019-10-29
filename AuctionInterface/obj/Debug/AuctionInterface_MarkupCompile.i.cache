@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\User\Desktop\Темир\Уник\БД\DataBaseCursach\AuctionInterface\obj\Debug\
+C:\Users\СикировТ\Desktop\DataBaseCursach\AuctionInterface\obj\Debug\
 AuctionInterface
 none
 false
 DEBUG;TRACE
-C:\Users\User\Desktop\Темир\Уник\БД\DataBaseCursach\AuctionInterface\App.xaml
-81569753404
+C:\Users\СикировТ\Desktop\DataBaseCursach\AuctionInterface\App.xaml
+10115382015
 
-21334639346
-18827804396
-DataPages\AuctionPages\AuctionEditAdd.xaml;DataPages\AuctionPages\AuctionPage.xaml;DataPages\Client\AddClientPage.xaml;DataPages\Client\ClientPage.xaml;DataPages\ItemPages\ItemEditAddPage.xaml;DataPages\ItemPages\ItemPage.xaml;MainMenu.xaml;MainWindow.xaml;
+241841383969
+18465950359
+DataPages\AuctionPages\AuctionEditAdd.xaml;DataPages\AuctionPages\AuctionPage.xaml;DataPages\Client\AddClientPage.xaml;DataPages\Client\ClientPage.xaml;DataPages\ItemPages\ItemEditAddPage.xaml;DataPages\ItemPages\ItemPage.xaml;DataPages\LotPages\LotEditAddPage.xaml;DataPages\LotPages\LotPage.xaml;MainMenu.xaml;MainWindow.xaml;
 
 True
 

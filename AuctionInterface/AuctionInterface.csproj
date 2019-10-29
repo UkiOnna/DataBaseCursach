@@ -88,6 +88,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="DataPages\LotPages\LotEditAddPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataPages\LotPages\LotPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -102,6 +110,7 @@
     </Compile>
     <Compile Include="AuctionContext.cs" />
     <Compile Include="CustomModels\CustomItem.cs" />
+    <Compile Include="CustomModels\CustomLot.cs" />
     <Compile Include="DataPages\AuctionPages\AuctionEditAdd.xaml.cs">
       <DependentUpon>AuctionEditAdd.xaml</DependentUpon>
     </Compile>
@@ -119,6 +128,12 @@
     </Compile>
     <Compile Include="DataPages\ItemPages\ItemPage.xaml.cs">
       <DependentUpon>ItemPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataPages\LotPages\LotEditAddPage.xaml.cs">
+      <DependentUpon>LotEditAddPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataPages\LotPages\LotPage.xaml.cs">
+      <DependentUpon>LotPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
