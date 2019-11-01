@@ -24,8 +24,6 @@
         public DbSet<Person> Clients { get; set; }
         public DbSet<Auction> Auctions { get; set; }
         public DbSet<Item> Items { get; set; }
-        public DbSet<Lot> Lots { get; set; }
-        public DbSet<FirmBook> FirmBooks { get; set; }
     }
 
 }

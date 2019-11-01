@@ -34,17 +34,25 @@ namespace AuctionInterface.DataPages.ItemPages
                 {
                     CustomItem item = new CustomItem();
                     item.Buyer = "";
-
+                    item.Auction = "";
                     item.StartPrice = context.Items.ToList()[i].StartPrice;
                     item.Name = context.Items.ToList()[i].Name;
                     item.EndPrice = context.Items.ToList()[i].EndPrice;
                     item.Description = context.Items.ToList()[i].Description;
                     item.SellerId = context.Items.ToList()[i].SellerId;
                     item.BuyerId = context.Items.ToList()[i].BuyerId;
+                    item.AuctionId= context.Items.ToList()[i].AuctionId;
+                    item.LotNumber = context.Items.ToList()[i].LotNumber;
                     if (context.Items.ToList()[i].BuyerId != null)
                     {
                         var buyer = context.Clients.FirstOrDefault(u => u.Id == item.BuyerId);
                         item.Buyer = buyer.Name;
+                    }
+
+                    if (context.Items.ToList()[i].AuctionId != null)
+                    {
+                        var auction = context.Auctions.FirstOrDefault(u => u.Id == item.AuctionId);
+                        item.Auction = auction.Name;
                     }
                     item.Id = context.Items.ToList()[i].Id;
                     var seller = context.Clients.FirstOrDefault(u => u.Id == item.SellerId);
@@ -66,7 +74,7 @@ namespace AuctionInterface.DataPages.ItemPages
             if (table.SelectedItem != null)
             {
                 CustomItem item = (CustomItem)table.SelectedItem;
-                _window.Content = new ItemEditAddPage(item.Name, item.StartPrice, item.EndPrice, item.Description, item.SellerId, item.BuyerId, item.Id, _window);
+                _window.Content = new ItemEditAddPage(item.SellerId, item.BuyerId, item.AuctionId, item.Id, _window);
             }
             else
             {

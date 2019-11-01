@@ -12,5 +12,6 @@ namespace AuctionInterface.Models
         public string Adress { get; set; }
         public DateTimeOffset AuctionDate { get; set; }
         public string Specify { get; set; }
+        public IEnumerable<Item> Items { get; set; }
     }
 }

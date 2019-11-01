@@ -1,6 +1,7 @@
 ﻿using AuctionInterface.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,25 +29,60 @@ namespace AuctionInterface.DataPages.ItemPages
         {
             InitializeComponent();
             _window = window;
+            using (var context = new AuctionContext())
+            {
+                foreach (var client in context.Clients)
+                {
+                    buyer.Items.Add(client.Name);
+                    seller.Items.Add(client.Name);
+                }
+
+                foreach (var auction in context.Auctions)
+                {
+                    this.auction.Items.Add(auction.Name);
+                }
+            }
         }
-        public ItemEditAddPage(string name, int startPrice, int? endPrice, string description, int sellerId, int? buyerId, int id, Window window)
+        public ItemEditAddPage(int sellerId, int? buyerId, int? auctionId, int id, Window window)
         {
             InitializeComponent();
             create.Visibility = Visibility.Hidden;
             edit.Visibility = Visibility.Visible;
             _window = window;
-            this.name.Text = name;
-            this.startPrice.Text = startPrice.ToString();
-            this.endPrice.Text = endPrice.ToString();
-            this.description.Text = description;
-            this.sellerId.Text = sellerId.ToString();
-            this.buyerId.Text = buyerId.ToString();
+            using (var context = new AuctionContext())
+            {
+                foreach (var client in context.Clients)
+                {
+                    buyer.Items.Add(client.Name);
+                    seller.Items.Add(client.Name);
+                }
+
+                foreach (var auction in context.Auctions)
+                {
+                    this.auction.Items.Add(auction.Name);
+                }
+
+                Item item = context.Items.SingleOrDefault(p => p.Id == id);
+                this.name.Text = item.Name;
+                this.startPrice.Text = item.StartPrice.ToString();
+                this.endPrice.Text = item.EndPrice.ToString();
+                this.description.Text = item.Description;
+                try
+                {
+                    this.auction.SelectedItem = context.Auctions.SingleOrDefault(p => p.Id == auctionId).Name;
+                    this.buyer.SelectedItem = context.Clients.SingleOrDefault(p => p.Id == buyerId).Name;
+                }
+                catch (Exception) { }
+                this.seller.SelectedItem = context.Clients.SingleOrDefault(p => p.Id == sellerId).Name;
+
+                this.lotNumber.Text = item.LotNumber.ToString();
+            }
             _id = id;
         }
 
         private bool IsDataFill()
         {
-            data.AddRange(new List<string> { name.Text, startPrice.Text, description.Text, sellerId.Text });
+            data.AddRange(new List<string> { name.Text, startPrice.Text, description.Text, seller.SelectedItem.ToString(), lotNumber.Text });
             foreach (var str in data)
             {
                 if (string.IsNullOrEmpty(str))
@@ -66,16 +102,21 @@ namespace AuctionInterface.DataPages.ItemPages
                 {
                     try
                     {
-                        Item item = new Item() { EndPrice = null, BuyerId = null };
-                        if (!string.IsNullOrEmpty(endPrice.Text) && !string.IsNullOrEmpty(buyerId.Text))
+                        Item item = new Item() { EndPrice = null, BuyerId = null, AuctionId = null };
+                        if (!string.IsNullOrEmpty(endPrice.Text) && buyer.SelectedItem!=null)
                         {
                             item.EndPrice = int.Parse(endPrice.Text);
-                            item.BuyerId = int.Parse(buyerId.Text);
+                            item.BuyerId = context.Clients.SingleOrDefault(p => p.Name == buyer.SelectedItem.ToString()).Id;
+                        }
+                        else if (auction.SelectedItem!=null)
+                        {
+                            item.AuctionId = context.Auctions.SingleOrDefault(p => p.Name == auction.SelectedItem.ToString()).Id;
                         }
                         item.Name = name.Text;
                         item.Description = description.Text;
                         item.StartPrice = int.Parse(startPrice.Text);
-                        item.SellerId = int.Parse(sellerId.Text);
+                        item.SellerId = context.Clients.SingleOrDefault(p => p.Name == seller.SelectedItem.ToString()).Id;
+                        item.LotNumber = int.Parse(lotNumber.Text);
                         context.Items.Add(item);
                     }
                     catch (FormatException)
@@ -102,15 +143,20 @@ namespace AuctionInterface.DataPages.ItemPages
                 using (var context = new AuctionContext())
                 {
                     Item item = context.Items.SingleOrDefault(p => p.Id == _id);
-                    if (!string.IsNullOrEmpty(endPrice.Text) && !string.IsNullOrEmpty(buyerId.Text))
+                    if (!string.IsNullOrEmpty(endPrice.Text) && buyer.SelectedItem != null)
                     {
                         item.EndPrice = int.Parse(endPrice.Text);
-                        item.BuyerId = int.Parse(buyerId.Text);
+                        item.BuyerId = context.Clients.SingleOrDefault(p => p.Name == buyer.SelectedItem.ToString()).Id;
+                    }
+                    else if (auction.SelectedItem != null)
+                    {
+                        item.AuctionId = context.Auctions.SingleOrDefault(p => p.Name == auction.SelectedItem.ToString()).Id;
                     }
                     item.Name = name.Text;
                     item.Description = description.Text;
                     item.StartPrice = int.Parse(startPrice.Text);
-                    item.SellerId = int.Parse(sellerId.Text);
+                    item.SellerId = context.Clients.SingleOrDefault(p => p.Name == seller.SelectedItem.ToString()).Id;
+                    item.LotNumber = int.Parse(lotNumber.Text);
                     context.SaveChanges();
                 }
                 MessageBox.Show("Edited");

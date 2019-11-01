@@ -9,21 +9,25 @@
       Title="ItemEditAddPage">
 
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="262,119,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top"/>
-        <TextBox Name="name" HorizontalAlignment="Left" Height="23" Margin="348,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBlock HorizontalAlignment="Left" Margin="262,159,0,0" TextWrapping="Wrap" Text="StartPrice" VerticalAlignment="Top"/>
-        <TextBox Name="startPrice" HorizontalAlignment="Left" Height="23" Margin="348,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="262,51,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top"/>
+        <TextBox Name="name" HorizontalAlignment="Left" Height="23" Margin="348,51,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="262,91,0,0" TextWrapping="Wrap" Text="StartPrice" VerticalAlignment="Top"/>
+        <TextBox Name="startPrice" HorizontalAlignment="Left" Height="23" Margin="348,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
-        <Button Name="create" Content="Create" HorizontalAlignment="Left" Margin="348,362,0,0" VerticalAlignment="Top" Width="75" Click="Create"/>
+        <Button Name="create" Content="Create" HorizontalAlignment="Left" Margin="348,367,0,0" VerticalAlignment="Top" Width="75" Click="Create"/>
         <Button Name="edit" Visibility="Hidden" Content="Edit" HorizontalAlignment="Left" Margin="348,362,0,0" VerticalAlignment="Top" Width="75" Click="Edit"/>
         <Button Content="Back" HorizontalAlignment="Left" Margin="33,35,0,0" VerticalAlignment="Top" Width="75"  Click="Back"/>
-        <TextBlock HorizontalAlignment="Left" Margin="262,199,0,0" TextWrapping="Wrap" Text="EndPrice" VerticalAlignment="Top"/>
-        <TextBox Name="endPrice" HorizontalAlignment="Left" Height="23" Margin="348,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBlock HorizontalAlignment="Left" Margin="262,233,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top"/>
-        <TextBox Name="description" HorizontalAlignment="Left" Height="23" Margin="348,233,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBlock HorizontalAlignment="Left" Margin="262,272,0,0" TextWrapping="Wrap" Text="SellerId" VerticalAlignment="Top"/>
-        <TextBox Name="sellerId" HorizontalAlignment="Left" Height="23" Margin="348,272,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBlock HorizontalAlignment="Left" Margin="262,311,0,0" TextWrapping="Wrap" Text="BuyerId" VerticalAlignment="Top"/>
-        <TextBox Name="buyerId" HorizontalAlignment="Left" Height="23" Margin="348,311,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="262,131,0,0" TextWrapping="Wrap" Text="EndPrice" VerticalAlignment="Top"/>
+        <TextBox Name="endPrice" HorizontalAlignment="Left" Height="23" Margin="348,130,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="262,165,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top"/>
+        <TextBox Name="description" HorizontalAlignment="Left" Height="23" Margin="348,165,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="262,204,0,0" TextWrapping="Wrap" Text="Seller" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="262,243,0,0" TextWrapping="Wrap" Text="Buyer" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="262,282,0,0" TextWrapping="Wrap" Text="LotNumber" VerticalAlignment="Top"/>
+        <TextBox Name="lotNumber" HorizontalAlignment="Left" Height="23" Margin="348,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="262,318,0,0" TextWrapping="Wrap" Text="Auction" VerticalAlignment="Top"/>
+        <ComboBox Name="seller" HorizontalAlignment="Left" Margin="348,204,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox Name="buyer" HorizontalAlignment="Left" Margin="348,243,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox Name="auction" HorizontalAlignment="Left" Margin="348,318,0,0" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Page>

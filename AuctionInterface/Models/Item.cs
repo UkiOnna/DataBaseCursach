@@ -17,5 +17,8 @@ namespace AuctionInterface.Models
         public Person Seller { get; set; }
         public int? BuyerId { get; set; }
         public Person Buyer { get; set; }
+        public int? AuctionId { get; set; }
+        public Auction Auction { get; set; }
+        public int LotNumber { get; set; }
     }
 }
