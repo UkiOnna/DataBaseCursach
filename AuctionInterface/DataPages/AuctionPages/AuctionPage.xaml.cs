@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AuctionInterface.DataPages.ItemPages;
 using AuctionInterface.Models;
 
 namespace AuctionInterface.DataPages.AuctionPages
@@ -78,6 +79,22 @@ namespace AuctionInterface.DataPages.AuctionPages
         void BackToMainMenu(object sender, RoutedEventArgs e)
         {
             _window.Content = new MainMenu(_window);
+        }
+
+
+
+        private void ShowItems(object sender, RoutedEventArgs e)
+        {
+            if (table.SelectedItem != null)
+            {
+                Auction auction = (Models.Auction)table.SelectedItem;
+                _window.Content = new ItemPage(auction.Id, _window);
+            }
+            else
+            {
+                MessageBox.Show("Строка не выбрана");
+            }
+            
         }
     }
 }

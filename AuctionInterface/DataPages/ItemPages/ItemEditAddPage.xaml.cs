@@ -148,7 +148,7 @@ namespace AuctionInterface.DataPages.ItemPages
                         item.EndPrice = int.Parse(endPrice.Text);
                         item.BuyerId = context.Clients.SingleOrDefault(p => p.Name == buyer.SelectedItem.ToString()).Id;
                     }
-                    else if (auction.SelectedItem != null)
+                    if (auction.SelectedItem != null)
                     {
                         item.AuctionId = context.Auctions.SingleOrDefault(p => p.Name == auction.SelectedItem.ToString()).Id;
                     }
