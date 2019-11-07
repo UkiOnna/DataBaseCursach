@@ -103,12 +103,12 @@ namespace AuctionInterface.DataPages.ItemPages
                     try
                     {
                         Item item = new Item() { EndPrice = null, BuyerId = null, AuctionId = null };
-                        if (!string.IsNullOrEmpty(endPrice.Text) && buyer.SelectedItem!=null)
+                        if (!string.IsNullOrEmpty(endPrice.Text) && buyer.SelectedItem != null)
                         {
                             item.EndPrice = int.Parse(endPrice.Text);
                             item.BuyerId = context.Clients.SingleOrDefault(p => p.Name == buyer.SelectedItem.ToString()).Id;
                         }
-                        else if (auction.SelectedItem!=null)
+                        else if (auction.SelectedItem != null)
                         {
                             item.AuctionId = context.Auctions.SingleOrDefault(p => p.Name == auction.SelectedItem.ToString()).Id;
                         }

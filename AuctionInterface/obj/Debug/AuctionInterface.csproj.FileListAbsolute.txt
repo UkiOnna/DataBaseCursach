@@ -132,3 +132,10 @@ C:\Users\СикировТ\Desktop\DataBaseCursach\AuctionInterface\obj\Debug\Dat
 C:\Users\СикировТ\Desktop\DataBaseCursach\AuctionInterface\obj\Debug\DataPages\LotPages\LotPage.g.cs
 C:\Users\СикировТ\Desktop\DataBaseCursach\AuctionInterface\obj\Debug\DataPages\LotPages\LotEditAddPage.baml
 C:\Users\СикировТ\Desktop\DataBaseCursach\AuctionInterface\obj\Debug\DataPages\LotPages\LotPage.baml
+C:\Users\User\Desktop\Темир\Уник\БД\DataBaseCursach\AuctionInterface\bin\Debug\MaterialDesignColors.dll
+C:\Users\User\Desktop\Темир\Уник\БД\DataBaseCursach\AuctionInterface\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\User\Desktop\Темир\Уник\БД\DataBaseCursach\AuctionInterface\bin\Debug\MaterialDesignColors.pdb
+C:\Users\User\Desktop\Темир\Уник\БД\DataBaseCursach\AuctionInterface\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\User\Desktop\Темир\Уник\БД\DataBaseCursach\AuctionInterface\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\User\Desktop\Темир\Уник\БД\DataBaseCursach\AuctionInterface\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\User\Desktop\Темир\Уник\БД\DataBaseCursach\AuctionInterface\obj\Debug\App.baml
