@@ -82,15 +82,22 @@ namespace AuctionInterface.DataPages.ItemPages
 
         private bool IsDataFill()
         {
-            data.AddRange(new List<string> { name.Text, startPrice.Text, description.Text, seller.SelectedItem.ToString(), lotNumber.Text });
-            foreach (var str in data)
+            try
             {
-                if (string.IsNullOrEmpty(str))
+                data.AddRange(new List<string> { name.Text, startPrice.Text, description.Text, seller.SelectedItem.ToString(), lotNumber.Text });
+                foreach (var str in data)
                 {
-                    return false;
+                    if (string.IsNullOrEmpty(str))
+                    {
+                        return false;
+                    }
                 }
+                return true;
             }
-            return true;
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         private void Create(object sender, RoutedEventArgs e)
@@ -108,7 +115,7 @@ namespace AuctionInterface.DataPages.ItemPages
                             item.EndPrice = int.Parse(endPrice.Text);
                             item.BuyerId = context.Clients.SingleOrDefault(p => p.Name == buyer.SelectedItem.ToString()).Id;
                         }
-                        else if (auction.SelectedItem != null)
+                        if (auction.SelectedItem != null)
                         {
                             item.AuctionId = context.Auctions.SingleOrDefault(p => p.Name == auction.SelectedItem.ToString()).Id;
                         }
